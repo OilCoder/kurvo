@@ -1,0 +1,11 @@
+#COMPLETION
+#Hess 'A' 32
+#Completion 2011 (ACO-1, KGS engineering data)
+#05/02/11 00:00:00
+Surface casing 23 lb/ft, hole 12-1/4in, 150 sx Class A 3% CC|Casing 8-5/8"|0|258
+Surface casing shoe|Casing Shoe 8-5/8"|253|258
+Production casing 15.5 lb/ft, hole 7-7/8in, 125 sx Thick Set|Casing 5-1/2"|0|2609
+Production casing shoe|Casing Shoe 5-1/2"|2604|2609
+Perforations 6 shots/ft at the top of the Arbuckle, 100 gal 20% mud acid|Perforation 5-1/2"|2607|2609
+Open hole in the Arbuckle; IP 100 bbl oil per day, no water (pumping)|Open Hole 7-7/8"|2609|2614
+Tubing 2-3/8in at 2610 ft|Tubing 2.375"|0|2610

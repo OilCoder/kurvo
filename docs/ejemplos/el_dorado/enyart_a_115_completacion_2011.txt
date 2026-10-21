@@ -1,0 +1,11 @@
+#COMPLETION
+#Enyart 'A' 115
+#Completion 2011 (ACO-1, KGS engineering data)
+#12/01/11 00:00:00
+Surface casing 23 lb/ft, hole 12-1/4in, 150 sx Class A 2% gel 3% CC|Casing 8-5/8"|0|262
+Surface casing shoe|Casing Shoe 8-5/8"|257|262
+Production casing 15.5 lb/ft, hole 7-7/8in, 125 sx Thickset|Casing 5-1/2"|0|2444
+Production casing shoe|Casing Shoe 5-1/2"|2439|2444
+Perforations 8 shots/ft above the shoe|Perforation 5-1/2"|2440|2444
+Open hole in the Arbuckle; acid 100 gal 20% mud acid, 200 gal 20% NEFE, 500 gal 28% NENE; IP 10 bbl oil + 19 bbl water per day (pumping)|Open Hole 7-7/8"|2444|2465
+Tubing 2-3/8in at 2435 ft, no packer|Tubing 2.375"|0|2435

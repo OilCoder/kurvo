@@ -1,0 +1,10 @@
+#COMPLETION
+#Bloir 'A' 33
+#Plugging 2014 (CP-4)
+#06/05/14 00:00:00
+Surface casing (not pulled)|Casing 8-5/8"|0|263
+Production casing left below 1010 ft (popped free at 1010 ft and pulled above)|Casing 5-1/2"|1010|2445
+Open hole below the CIBP|Open Hole 7-7/8"|2445|2481
+CIBP at 2390 ft|Bridge Plug 5-1/2"|2390|2392
+1 sx cement dump-bailed on the CIBP|Cement Plug 5-1/2"|2380|2390
+138 sx 60/40 pozmix through tubing at 310 ft to surface|Cement Plug 8-5/8"|0|310

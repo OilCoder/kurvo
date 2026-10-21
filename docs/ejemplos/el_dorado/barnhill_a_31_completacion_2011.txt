@@ -1,0 +1,9 @@
+#COMPLETION
+#Barnhill 'A' 31
+#Completion 2011 (ACO-1, KGS engineering data)
+#04/21/11 00:00:00
+Surface casing 23 lb/ft, hole 12-1/4in, 100 sx Class A 3% CC|Casing 8-5/8"|0|263
+Surface casing shoe|Casing Shoe 8-5/8"|258|263
+Production casing 15.5 lb/ft, hole 7-7/8in, 125 sx Thickset|Casing 5-1/2"|0|2486
+Production casing shoe|Casing Shoe 5-1/2"|2481|2486
+Perforations in the Arbuckle, 6 shots/ft, 100 gal 15% acid; IP 215 bbl oil per day, no water (pumping)|Perforation 5-1/2"|2464|2482

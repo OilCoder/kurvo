@@ -1,0 +1,10 @@
+#COMPLETION
+#Bloir 'A' 33
+#Completion 2011 (ACO-1)
+#05/19/11 00:00:00
+Surface casing 23 lb/ft, hole 12-1/4in, 185 sx Class A|Casing 8-5/8"|0|263
+Surface casing shoe|Casing Shoe 8-5/8"|258|263
+Production casing 15.5 lb/ft J-55, hole 7-7/8in, 125 sx Thickset|Casing 5-1/2"|0|2445
+Production casing shoe|Casing Shoe 5-1/2"|2440|2445
+Open hole in the Arbuckle; IP 1 bbl oil + 315 bbl water per day (pumping)|Open Hole 7-7/8"|2445|2481
+Tubing 2-7/8in at 1058 ft, no packer|Tubing 2.875"|0|1058

@@ -1,0 +1,105 @@
+#Depth Start	Depth End	Lithology Type	Remarks
+3988	4012	4	SH (digital mud log, typical sample: SH 100%)
+4012	4026	2	LS (digital mud log, typical sample: LS 100%)
+4026	4036	4	SH (digital mud log, typical sample: SH 100%)
+4036	4050	2	LS (digital mud log, typical sample: LS 100%)
+4050	4066	4	SH (digital mud log, typical sample: SH 100%)
+4066	4096	2	LS (digital mud log, typical sample: LS 100%)
+4096	4106	4	SH (digital mud log, typical sample: SH 100%)
+4106	4184	2	LS (digital mud log, typical sample: LS 100%)
+4184	4192	4	SH (digital mud log, typical sample: SH 100%)
+4192	4422	2	LS (digital mud log, typical sample: LS 100%)
+4422	4432	4	SH (digital mud log, typical sample: SH 100%)
+4432	4448	2	LS (digital mud log, typical sample: LS 100%)
+4448	4458	4	SH (digital mud log, typical sample: SH 100%)
+4458	4538	2	LS (digital mud log, typical sample: LS 100%)
+4538	4556	4	SH (digital mud log, typical sample: SH 100%)
+4556	4598	2	LS (digital mud log, typical sample: LS 100%)
+4598	4604	4	SH (digital mud log, typical sample: SH 100%)
+4604	4696	2	LS (digital mud log, typical sample: LS 100%)
+4696	4710	4	SH (digital mud log, typical sample: SH 100%)
+4710	4740	2	LS (digital mud log, typical sample: LS 100%)
+4740	4744	4	SH (digital mud log, typical sample: SH 100%)
+4744	4802	2	LS (digital mud log, typical sample: LS 100%)
+4802	4822	4	SH (digital mud log, typical sample: SH 100%)
+4822	4826	2	LS (digital mud log, typical sample: LS 100%)
+4826	4834	4	SH (digital mud log, typical sample: SH 100%)
+4834	4870	2	LS (digital mud log, typical sample: LS 100%)
+4870	4874	4	SH (digital mud log, typical sample: SH 100%)
+4874	4898	2	LS (digital mud log, typical sample: LS 100%)
+4898	4904	4	SH (digital mud log, typical sample: SH 100%)
+4904	4912	2	LS (digital mud log, typical sample: LS 100%)
+4912	4916	4	SH (digital mud log, typical sample: SH 100%)
+4916	4922	2	LS (digital mud log, typical sample: LS 100%)
+4922	4960	4	SH (digital mud log, typical sample: SH 100%)
+4960	4968	2	LS (digital mud log, typical sample: LS 100%)
+4968	4978	4	SH (digital mud log, typical sample: SH 100%)
+4978	4982	2	LS (digital mud log, typical sample: LS 100%)
+4982	4992	4	SH (digital mud log, typical sample: SH 100%)
+4992	4996	2	LS (digital mud log, typical sample: LS 100%)
+4996	5002	4	SH (digital mud log, typical sample: SH 100%)
+5002	5006	2	LS (digital mud log, typical sample: LS 100%)
+5006	5020	4	SH (digital mud log, typical sample: SH 100%)
+5020	5036	2	LS (digital mud log, typical sample: LS 100%)
+5036	5040	4	SH (digital mud log, typical sample: SH 100%)
+5040	5046	2	LS (digital mud log, typical sample: LS 100%)
+5046	5054	4	SH (digital mud log, typical sample: SH 100%)
+5054	5078	2	LS (digital mud log, typical sample: LS 100%)
+5078	5088	4	SH (digital mud log, typical sample: SH 100%)
+5088	5108	2	LS (digital mud log, typical sample: LS 100%)
+5108	5134	4	SH (digital mud log, typical sample: SH 100%)
+5134	5142	2	LS (digital mud log, typical sample: LS 100%)
+5142	5148	4	SH (digital mud log, typical sample: SH 100%)
+5148	5168	2	LS (digital mud log, typical sample: LS 100%)
+5168	5182	4	SH (digital mud log, typical sample: SH 100%)
+5182	5186	2	LS (digital mud log, typical sample: LS 100%)
+5186	5190	4	SH (digital mud log, typical sample: SH 100%)
+5190	5202	2	LS (digital mud log, typical sample: LS 100%)
+5202	5222	4	SH (digital mud log, typical sample: SH 100%)
+5222	5226	2	LS (digital mud log, typical sample: LS 100%)
+5226	5240	4	SH (digital mud log, typical sample: SH 100%); cored interval
+5240	5244	2	LS (digital mud log, typical sample: LS 100%); cored interval
+5244	5290	1	SS (digital mud log, typical sample: SS 100%); cored interval
+5290	5312	4	SH (digital mud log, typical sample: SH 100%); cored interval
+5312	5442	2	LS (digital mud log, typical sample: LS 100%); cored interval
+5442	5476	4	SH (digital mud log, typical sample: SH 100%); cored interval
+5476	5532	2	LS (digital mud log, typical sample: LS 100%); cored interval
+5532	5556	4	SH (digital mud log, typical sample: SH 100%); cored interval
+5556	5574	1	SS (digital mud log, typical sample: SS 100%); cored interval
+5574	5578	4	SH (digital mud log, typical sample: SH 100%); cored interval
+5578	5622	2	LS (digital mud log, typical sample: LS 100%); cored interval
+5622	5650	1	SS (digital mud log, typical sample: SS 100%); cored interval
+5650	5774	2	LS (digital mud log, typical sample: LS 100%); cored interval
+5774	5778	4	SH (digital mud log, typical sample: SH 100%)
+5778	5802	2	LS (digital mud log, typical sample: LS 100%)
+5802	5838	4	SH (digital mud log, typical sample: SH 100%)
+5838	5850	2	LS (digital mud log, typical sample: LS 100%)
+5850	5854	4	SH (digital mud log, typical sample: SH 100%)
+5854	5868	5	DOLO (digital mud log, typical sample: DOLO 100%)
+5868	5890	2	LS (digital mud log, typical sample: LS 100%)
+5890	5902	5	DOLO (digital mud log, typical sample: DOLO 100%)
+5902	5924	2	LS (digital mud log, typical sample: LS 100%)
+5924	5932	5	DOLO (digital mud log, typical sample: DOLO 100%)
+5932	5972	2	LS (digital mud log, typical sample: LS 100%)
+5972	5976	5	DOLO (digital mud log, typical sample: DOLO 100%)
+5976	5996	2	LS (digital mud log, typical sample: LS 100%)
+5996	6018	5	DOLO (digital mud log, typical sample: DOLO 100%)
+6018	6026	2	LS (digital mud log, typical sample: LS 100%)
+6026	6338	5	DOLO (digital mud log, typical sample: DOLO 100%)
+6338	6344	2	LS (digital mud log, typical sample: LS 100%)
+6344	6352	5	DOLO (digital mud log, typical sample: DOLO 100%)
+6352	6476	2	LS (digital mud log, typical sample: LS 100%)
+6476	6494	5	DOLO (digital mud log, typical sample: DOLO 100%); cored interval
+6494	6500	7	CONGL (digital mud log, typical sample: CONGL 100%); cored interval
+6500	6670	5	DOLO (digital mud log, typical sample: DOLO 100%); cored interval
+6670	6682	1	SS (digital mud log, typical sample: SS 100%); cored interval
+6682	7242	5	DOLO (digital mud log, typical sample: DOLO 100%); cored interval
+7242	7246	19	CHERT (digital mud log, typical sample: CHERT 100%)
+7246	7250	5	DOLO (digital mud log, typical sample: DOLO 100%)
+7250	7266	19	CHERT (digital mud log, typical sample: CHERT 100%)
+7266	7272	5	DOLO (digital mud log, typical sample: DOLO 100%); cored interval
+7272	7276	19	CHERT (digital mud log, typical sample: CHERT 100%); cored interval
+7276	7532	5	DOLO (digital mud log, typical sample: DOLO 100%)
+7532	7598	1	SS (digital mud log, typical sample: SS 100%); cored interval
+7598	7606	7	CONGL (digital mud log, typical sample: CONGL 100%)
+7606	7736	22	IGNEOUS (digital mud log, typical sample: IGNEOUS 100%)

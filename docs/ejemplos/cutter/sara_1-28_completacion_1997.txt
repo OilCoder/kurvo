@@ -1,0 +1,13 @@
+#COMPLETION
+#Sara 1-28
+#Completion 1997 (ACO-1)
+#09/10/97 00:00:00
+Surface casing 24 lb/ft, hole 12-1/4in, 550 sx Lite + 150 sx Common|Casing 8-5/8"|0|1699
+Surface casing shoe|Casing Shoe 8-5/8"|1694|1699
+Production casing 15.5 lb/ft, hole 7-7/8in, two stages, DV tool at 3391 ft|Casing 5-1/2"|0|5800
+Production casing shoe|Casing Shoe 5-1/2"|5795|5800
+Chester, 4 spf|Perforation 5-1/2"|5550|5561
+Chester, 4 spf|Perforation 5-1/2"|5582|5589
+Chester, 4 spf, squeezed with 75 sx (water)|Perforation 5-1/2"|5652|5657
+Squeeze cement, PBTD 5640 ft|Cement Plug 5-1/2"|5640|5657
+Tubing 2-3/8in at 5561 ft, no packer|Tubing 2.375"|0|5561

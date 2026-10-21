@@ -1,0 +1,47 @@
+#Depth Start	Depth End	Lithology Type	Remarks
+1750	1898	2	Lansing LS: white-gray-tan, dense to fine crystalline, some chalky and argillaceous, very slightly cherty; poor-no visible porosity, no show
+1898	1907	4	SH: gray-black, some pyritic and carbonaceous
+1907	1910	2	LS: dense, argillaceous
+1910	1985	6	SILTS: light-dark gray and green-gray, micaceous, calcareous, rare sandy
+1985	2044	4	SH: medium-dark gray, some pyritic, calcareous and limy
+2044	2065	2	Kansas City LS: tan-gray-white, mottled, oolitic and fossiliferous packstone; poor-fair porosity, no show
+2065	2080	2	LS: dark-light gray and tan, very oolitic packstone, cherty; very poor-poor porosity, no show
+2080	2153	2	LS: tan-gray-white-cream, dense to fine crystalline, fossiliferous packstone-wackestone, some chalky; very poor-poor porosity, no show
+2153	2158	4	Stark SH: gray-black, subcarbonaceous to very carbonaceous
+2158	2175	2	LS: gray-tan-white, mottled, slightly cherty; very poor-fair porosity, trace free oil and cut, >99% barren
+2175	2180	4	SH: gray-black, carbonaceous
+2180	2190	2	LS: tan-cream-white, granular packstone; poor-fair porosity, trace free oil, >99% barren
+2190	2196	4	SH: gray-black, carbonaceous
+2196	2207	2	LS: gray-brown-tan-cream, oolitic and fossiliferous packstone, argillaceous; no show
+2207	2222	6	SILTS: gray and dark-light gray, calcareous, some sandy
+2222	2228	2	LS: gray, dense, argillaceous
+2228	2255	13	Base Kansas City SH-SILTS: light-dark gray, calcareous, micaceous, pyritic
+2255	2283	4	SH: gray, gray-black and green-gray, pyritic
+2283	2287	4	SH: black carbonaceous
+2287	2295	2	Checkerboard LS: cream-tan-gray, dense, mottled packstone; no visible porosity
+2295	2300	4	SH: gray-black and green-gray, calcareous
+2300	2305	2	LS: tan-gray, dense, argillaceous
+2305	2335	13	SH-SILTS: gray and green-gray, with black subcarbonaceous shale
+2335	2340	2	Altamont LS: tan-gray-white, dense, cryptocrystalline; no visible porosity
+2340	2345	4	SH: gray, green-gray and black carbonaceous, pyritic
+2345	2362	2	LS: cream-gray-tan-brown, dense, mottled wackestone-packstone, argillaceous
+2362	2372	4	SH: green-gray and black carbonaceous
+2372	2395	2	LS: tan-gray-white-brown, dense mudstone, rare packstone and chalky
+2395	2400	4	SH: black carbonaceous and light-dark gray
+2400	2413	2	LS: gray-brown-tan-white, dense, argillaceous, rare chalky
+2413	2416	4	Cherokee SH: black carbonaceous
+2416	2420	2	LS: gray-tan, dense mudstone
+2420	2455	4	SH: green-gray, black and maroon-red, micaceous, pyritic, with green-gray siltstone
+2455	2463	6	SILTS: gray, calcareous, micaceous, with dense limestone
+2463	2481	4	SH: very abundant, gray-black and dark gray
+2481	2486	2	Ardmore LS: tan-cream and gray-brown, dense mudstone
+2486	2490	4	SH: black carbonaceous
+2490	2497	2	LS: dark gray-brown, dense, argillaceous mudstone
+2497	2578	4	SH: gray, green-gray, maroon and gray-black, pyritic, some carbonaceous
+2578	2585	19	CHERT: white-cream-buff, tripolitic and subtripolitic, weathered; no show
+2585	2612	1	Simpson SS: white-tan, very fine to medium, well rounded, friable; fair-good porosity, saturated stain and bright fluorescence (DSTs: watery mud, trace of oil)
+2612	2618	4	SH: gray-black and green-gray, carbonaceous
+2618	2640	11	SS: light gray-white and green-gray, very fine to medium, very well cemented, calcareous, silty; barren, very poor porosity
+2640	2657	4	Simpson SH: gray-brown-black, green-gray and turquoise-green
+2657	2665	1	Basal Simpson SS: light gray-white-buff, very fine to fine, well cemented; trace fluorescence, >99% barren
+2665	2720	5	Arbuckle DOLO: buff-gray-tan, very fine to medium crystalline, some sandy and cherty; fair-good vug and intercrystalline porosity, no show (wet)

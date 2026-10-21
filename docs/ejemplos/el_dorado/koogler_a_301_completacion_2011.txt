@@ -1,0 +1,9 @@
+#COMPLETION
+#Koogler 'A' 301
+#Completion 2011 (ACO-1, KGS engineering data)
+#05/11/11 00:00:00
+Surface casing 23 lb/ft, hole 12-1/4in, 150 sx Class A 3% CC|Casing 8-5/8"|0|267
+Surface casing shoe|Casing Shoe 8-5/8"|262|267
+Production casing 15.5 lb/ft, hole 7-7/8in, 125 sx Thick Set|Casing 5-1/2"|0|2589
+Production casing shoe|Casing Shoe 5-1/2"|2584|2589
+Perforations at the top of the Viola, 4 shots/ft; IP 6 bbl oil + 390 bbl water per day (pumping)|Perforation 5-1/2"|2548|2550

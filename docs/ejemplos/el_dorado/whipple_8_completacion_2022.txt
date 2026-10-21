@@ -1,0 +1,10 @@
+#COMPLETION
+#Whipple 8
+#Completion 2022 (ACO-1, KGS engineering data)
+#12/13/22 00:00:00
+Surface casing 23 lb/ft, hole 12-1/4in, 94 sx Class A|Casing 8-5/8"|0|210
+Surface casing shoe|Casing Shoe 8-5/8"|205|210
+Production casing 15.5 lb/ft, hole 7-7/8in, 150 sx Class A|Casing 5-1/2"|0|2558
+Production casing shoe|Casing Shoe 5-1/2"|2553|2558
+Perforations in the Arbuckle, 2 shots/ft, 250 gal 15% HCl; IP 10 bbl oil + 200 bbl water per day (pumping)|Perforation 5-1/2"|2464|2468
+Tubing 2-7/8in at 2465 ft|Tubing 2.875"|0|2465

@@ -1,0 +1,12 @@
+#COMPLETION
+#Cutter #10
+#Completion 2024 (ACO-1, KGS engineering data)
+#08/10/24 00:00:00
+Surface casing 24 lb/ft, hole 12-1/4in, 900 sx 65/35 poz (lead) and Class A (tail)|Casing 8-5/8"|0|1735
+Surface casing shoe|Casing Shoe 8-5/8"|1730|1735
+Production casing 15.5 lb/ft, hole 7-7/8in, cemented in two stages: 400 sx at the shoe and 450 sx through the stage tool at 3203 ft|Casing 5-1/2"|0|5711
+Production casing shoe|Casing Shoe 5-1/2"|5706|5711
+Perforations 4 shots/ft; acid 1500 gal 7.5% MCA with 50 balls|Perforation 5-1/2"|5544|5556
+Perforations 4 shots/ft; acid 1000 gal 7.5% MCA with 40 balls|Perforation 5-1/2"|5624|5628
+Perforations 4 shots/ft; frac 5544-5646 ft with 38,000 gal 2% KCl and 50,000 lb sand; IP 30 bbl oil + 15 bbl water per day (pumping)|Perforation 5-1/2"|5636|5646
+Tubing 2-7/8in at 5480 ft|Tubing 2.875"|0|5480

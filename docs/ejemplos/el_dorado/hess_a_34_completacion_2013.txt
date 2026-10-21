@@ -1,0 +1,7 @@
+#COMPLETION
+#Hess 'A' 34
+#Dry hole 2013 (ACO-1, KGS engineering data)
+#11/11/13 00:00:00
+Surface casing 24 lb/ft, hole 12-1/4in, 150 sx Class A 3% CC|Casing 8-5/8"|0|260
+Surface casing shoe|Casing Shoe 8-5/8"|255|260
+Open hole 7-7/8in to total depth; three DSTs in the Simpson recovered mud and watery mud with traces of oil; dry and abandoned, plugged 11/11/2013|Open Hole 7-7/8"|260|2730

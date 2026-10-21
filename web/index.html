@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kurvo · curvas de pozo en orden</title>
+<meta name="description" content="Kurvo: mantenimiento de curvas de registros de pozo en siete pasos. Gratis para uso no comercial.">
+<meta property="og:title" content="Kurvo · curvas de pozo en orden">
+<meta property="og:description" content="Cargar, revisar, reparar, alinear, reconstruir, comprobar y entregar registros de pozo, paso a paso.">
+<meta property="og:image" content="kurvo.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --fondo: #ffffff; --fondo-2: #f6f8fa; --texto: #1f2328; --suave: #59636e; --linea: #d8dee4;
+  --acento: #0f8f88; --acento-2: #16306e; --naranja: #e8940f; --nota: #6e7781;
+  --sombra: 0 1px 2px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fondo: #0f1419; --fondo-2: #171d24; --texto: #e6e9ec; --suave: #9aa5b1; --linea: #2b343e;
+    --acento: #3cc6bd; --acento-2: #8fb0ff; --naranja: #ffae2b; --nota: #8b96a2;
+    --sombra: 0 1px 2px rgba(0,0,0,.4), 0 4px 16px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"] {
+  --fondo: #0f1419; --fondo-2: #171d24; --texto: #e6e9ec; --suave: #9aa5b1; --linea: #2b343e;
+  --acento: #3cc6bd; --acento-2: #8fb0ff; --naranja: #ffae2b; --nota: #8b96a2;
+  --sombra: 0 1px 2px rgba(0,0,0,.4), 0 4px 16px rgba(0,0,0,.3);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--fondo); color: var(--texto);
+  font: 19px/1.65 "Source Serif 4", Georgia, serif; -webkit-font-smoothing: antialiased; }
+a { color: var(--acento); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+h1, h2, h3, .sans, nav, figcaption, .boton, table, .paso-btn, .meta { font-family: Inter, system-ui, sans-serif; }
+code { font: .82em "JetBrains Mono", Consolas, monospace; background: var(--fondo-2); padding: .1em .35em; border-radius: 4px; }
+pre { font: 14px/1.5 "JetBrains Mono", Consolas, monospace; background: var(--fondo-2); border: 1px solid var(--linea);
+  border-radius: 8px; padding: 14px 16px; overflow-x: auto; }
+
+/* rejilla tipo distill: margen | texto | notas */
+.l { display: grid; grid-template-columns: 1fr min(680px, calc(100% - 32px)) 1fr; column-gap: 0; }
+.l > * { grid-column: 2; }
+.ancho { grid-column: 1 / -1; width: min(1100px, calc(100% - 32px)); justify-self: center; }
+@media (min-width: 1180px) {
+  .l { grid-template-columns: 1fr 680px 260px 1fr; column-gap: 36px; }
+  .l > * { grid-column: 2; }
+  .ancho { grid-column: 2 / 4; width: auto; }
+  aside.nota { grid-column: 3; grid-row: span 3; align-self: start; margin-top: .4em !important; }
+}
+aside.nota { font: 14px/1.5 Inter, system-ui, sans-serif; color: var(--nota); margin: .2em 0 1.2em;
+  border-left: 2px solid var(--linea); padding-left: 12px; }
+@media (max-width: 1179px) { aside.nota { background: var(--fondo-2); border-radius: 6px; padding: 10px 12px; border-left-color: var(--acento); } }
+
+/* portada */
+header.portada { border-bottom: 1px solid var(--linea); padding: 72px 0 40px; background:
+  radial-gradient(1200px 400px at 20% -10%, color-mix(in srgb, var(--acento) 14%, transparent), transparent),
+  radial-gradient(900px 400px at 100% 0%, color-mix(in srgb, var(--acento-2) 12%, transparent), transparent); }
+.marca { display: flex; align-items: center; gap: 20px; margin-bottom: 18px; }
+.marca img { width: 84px; height: 84px; border-radius: 20px; box-shadow: var(--sombra); }
+h1 { font-size: clamp(40px, 7vw, 64px); line-height: 1.02; letter-spacing: -.03em; margin: 0; font-weight: 700; }
+.lema { font-size: clamp(22px, 3vw, 27px); line-height: 1.35; color: var(--suave); margin: 10px 0 28px; font-weight: 400; }
+.botones { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 34px; }
+.boton { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 10px; font-size: 16px;
+  font-weight: 600; text-decoration: none; border: 1px solid var(--linea); color: var(--texto); background: var(--fondo); }
+.boton.principal { background: linear-gradient(135deg, #12a8a0, #16306e); color: #fff; border: 0; }
+.boton:hover { filter: brightness(1.07); }
+.meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; font-size: 13px;
+  border-top: 1px solid var(--linea); padding-top: 18px; color: var(--suave); }
+.meta b { display: block; color: var(--texto); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 2px; }
+
+nav.indice { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--fondo) 88%, transparent);
+  backdrop-filter: blur(8px); border-bottom: 1px solid var(--linea); font-size: 14px; }
+nav.indice .enlaces { display: flex; gap: 20px; overflow-x: auto; padding: 10px 0; white-space: nowrap; }
+nav.indice a { color: var(--suave); text-decoration: none; }
+nav.indice a:hover { color: var(--acento); }
+
+main { padding-bottom: 40px; }
+h2 { font-size: 30px; letter-spacing: -.02em; margin: 2.2em 0 .5em; line-height: 1.2; }
+h3 { font-size: 20px; margin: 1.8em 0 .4em; }
+p { margin: 0 0 1.1em; }
+.entrada { font-size: 22px; line-height: 1.55; }
+blockquote { margin: 1.2em 0; padding: 4px 0 4px 20px; border-left: 3px solid var(--naranja); font-style: italic; color: var(--suave); }
+
+figure { margin: 1.6em 0 2em; }
+figure img { width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--linea);
+  box-shadow: var(--sombra); cursor: zoom-in; background: #fff; }
+figcaption { font-size: 13.5px; line-height: 1.5; color: var(--nota); margin-top: 10px; }
+figcaption b { color: var(--texto); }
+.dos { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 760px) { .dos { grid-template-columns: 1fr; } }
+
+table { border-collapse: collapse; width: 100%; font-size: 14.5px; margin: 1em 0 1.6em; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--linea); vertical-align: top; }
+th { font-weight: 600; color: var(--suave); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.gas { color: var(--acento); font-weight: 600; }
+.agua { color: var(--acento-2); font-weight: 600; }
+.mezcla { color: var(--naranja); font-weight: 600; }
+.tabla-scroll { overflow-x: auto; }
+
+/* los siete pasos */
+.pasos { border: 1px solid var(--linea); border-radius: 12px; overflow: hidden; background: var(--fondo-2); }
+.paso-barra { display: flex; overflow-x: auto; border-bottom: 1px solid var(--linea); background: var(--fondo); }
+.paso-btn { flex: 1 0 auto; border: 0; background: none; padding: 12px 14px; font-size: 14px; color: var(--suave);
+  cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap; }
+.paso-btn span { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--fondo-2); border: 1px solid var(--linea); font-size: 12px; margin-right: 6px; font-weight: 600; }
+.paso-btn[aria-selected="true"] { color: var(--texto); border-bottom-color: var(--acento); font-weight: 600; }
+.paso-btn[aria-selected="true"] span { background: var(--acento); color: #fff; border-color: var(--acento); }
+.paso-cuerpo { padding: 20px 22px 22px; display: grid; gap: 16px; }
+.paso-cuerpo img { width: 100%; border-radius: 6px; border: 1px solid var(--linea); background: #fff; cursor: zoom-in; }
+.paso-cuerpo h3 { margin: 0; }
+.paso-cuerpo p { margin: 0; font-size: 17px; }
+.paso-cuerpo .herr { font: 13.5px/1.6 Inter, system-ui, sans-serif; color: var(--suave); }
+
+.tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 1.2em 0 1.8em; }
+.tarjeta { border: 1px solid var(--linea); border-radius: 10px; padding: 14px 16px; font: 14.5px/1.5 Inter, system-ui, sans-serif; }
+.tarjeta b { display: block; font-size: 15px; margin-bottom: 4px; }
+.tarjeta .cifra { font-size: 28px; font-weight: 700; color: var(--acento); letter-spacing: -.02em; }
+
+footer.apendice { border-top: 1px solid var(--linea); background: var(--fondo-2); padding: 34px 0 60px;
+  font: 14px/1.6 Inter, system-ui, sans-serif; color: var(--suave); }
+footer.apendice h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--texto); margin: 1.6em 0 .4em; }
+footer.apendice pre { font-size: 12.5px; }
+
+/* zoom de imágenes */
+dialog.zoom { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 94vh; }
+dialog.zoom::backdrop { background: rgba(10, 14, 20, .82); }
+dialog.zoom img { max-width: 96vw; max-height: 94vh; display: block; border-radius: 6px; cursor: zoom-out; background: #fff; }
+.tema { position: absolute; top: 16px; right: 16px; border: 1px solid var(--linea); background: var(--fondo);
+  color: var(--suave); border-radius: 8px; padding: 6px 10px; font: 13px Inter, sans-serif; cursor: pointer; }
+</style>
+</head>
+<body>
+<button class="tema" id="tema" type="button" aria-label="Cambiar tema">◐ Tema</button>
+
+<header class="portada">
+  <div class="l">
+    <div class="marca"><img src="kurvo.png" alt="Icono de Kurvo: una K hecha con una curva de registro"></div>
+    <h1>Kurvo</h1>
+    <p class="lema">Registros de pozo viejos, incompletos o desordenados, puestos en orden en siete pasos, sin
+      experiencia previa.</p>
+    <div class="botones">
+      <a class="boton principal" id="descargar" href="#">⬇ Descargar para Windows</a>
+      <a class="boton" id="codigo" href="#">Código fuente</a>
+      <a class="boton" id="manual" href="#">Manual</a>
+    </div>
+    <div class="meta">
+      <div><b>Autor</b>OilCoder</div>
+      <div><b>Versión</b>1.0 · octubre de 2026</div>
+      <div><b>Licencia</b>PolyForm Noncommercial: gratis para uso no comercial</div>
+      <div><b>Datos de ejemplo</b>Kansas Geological Survey</div>
+    </div>
+  </div>
+</header>
+
+<nav class="indice"><div class="l"><div class="enlaces">
+  <a href="#problema">El problema</a><a href="#pasos">Los siete pasos</a><a href="#eldorado">El Dorado</a>
+  <a href="#cutter">Cutter</a><a href="#reconstruir">Reconstruir</a><a href="#empezar">Empezar</a>
+  <a href="#limites">Límites</a>
+</div></div></nav>
+
+<main class="l">
+  <h2 id="problema">El problema</h2>
+  <p class="entrada">Un campo petrolero guarda registros de pozo de seis décadas: curvas digitalizadas de papel,
+    corridas sueltas, nombres que cambian de una compañía a otra, picos, huecos y tramos que nunca se midieron.
+    Antes de interpretar, alguien tiene que ponerlos en orden.</p>
+  <aside class="nota">Un <b>registro de pozo</b> es una tabla de mediciones contra la profundidad: rayos gamma,
+    resistividad, densidad, neutrón, sónico… Cada medición es una <b>curva</b>.</aside>
+  <p>Kurvo hace ese trabajo de <b>mantenimiento de curvas</b>. Lee archivos LAS y DLIS, pone una nota de calidad a
+    cada curva, las repara con vista previa y deshacer, las compara con los pozos vecinos, reconstruye lo que falta y
+    entrega archivos limpios. Está pensado para quien empieza: cada paso muestra solo sus herramientas, el programa
+    dice cuál es el siguiente y cada cambio queda anotado.</p>
+
+  <figure class="ancho">
+    <img src="capturas/gui_v10_principal_es.png" alt="Pantalla principal de Kurvo" loading="lazy">
+    <figcaption><b>La pantalla.</b> Arriba, los siete pasos; a la izquierda, el proyecto con la nota de calidad de
+      cada curva; al centro, el gráfico de registros; a la derecha, el control de calidad y la bitácora.</figcaption>
+  </figure>
+
+  <h2 id="pasos">Siete pasos, en el orden del trabajo</h2>
+  <p>La barra superior no agrupa las herramientas por tipo, sino por el momento del trabajo en que se usan. Elige un
+    paso:</p>
+  <div class="pasos ancho" id="pasos-widget">
+    <div class="paso-barra" role="tablist"></div>
+    <div class="paso-cuerpo" role="tabpanel">
+      <h3 id="paso-titulo"></h3>
+      <p id="paso-texto"></p>
+      <img id="paso-img" alt="">
+      <div class="herr" id="paso-herr"></div>
+    </div>
+  </div>
+  <aside class="nota">Arriba, junto al buscador, Kurvo muestra el <b>siguiente paso</b> que le falta al pozo
+    elegido, con un botón <b>Ir</b>.</aside>
+
+  <h2 id="eldorado">Caso real 1 · El Dorado: ¿por qué un pozo dio agua?</h2>
+  <blockquote>Bloir 'A' 33 se perforó en 2011 a 300 m de Bloir 'A' 32, que produce 100 barriles de petróleo por día.
+    Bloir 'A' 33 dio 1 barril de petróleo y 315 de agua, y se taponó en 2014. ¿Por qué?</blockquote>
+  <p>Doce pozos del campo El Dorado (Kansas) con petróleo en dolomitas del Arbuckle, a unos 2500 ft. Hay
+    productores, un pozo seco, un inyector y registros de 1962 y 1982, con su litología transcrita de los mud logs
+    y su mecánica: revestimientos, cañoneos y tapones.</p>
+  <figure class="ancho">
+    <img src="capturas/gui_v10_eldorado_corte_es.png" alt="Corte transversal de seis pozos en TVDSS" loading="lazy">
+    <figcaption><b>Corte transversal en profundidad bajo el nivel del mar.</b> Bloir 'A' 33 está <i>más alto</i> que su
+      vecino productor, así que la estructura no explica el agua. Hess 'A' 34 está unos 250 ft más bajo: por eso su
+      Arbuckle tiene agua.</figcaption>
+  </figure>
+  <aside class="nota">El programa toma la elevación de la mesa rotaria (KB) de la cabecera de cada LAS y pregunta
+    una sola vez si los pozos sin trayectoria son verticales.</aside>
+  <p>La petrofísica (porosidad de densidad con matriz dolomita, Archie con un Rw medido de 0,19 ohm-m y m = 2,3) da
+    la misma saturación en los dos pozos: <b>0,73 contra 0,68</b>. La diferencia está en la <b>roca y la
+    completación</b>. Bloir 'A' 33 tiene solo unos 8 ft porosos bajo un tope compacto, y se completó en pozo abierto
+    a lo largo de 36 ft: fluyó el agua de abajo. Bloir 'A' 32 se completó solo en los 9 ft porosos del tope.</p>
+  <div class="dos ancho">
+    <figure><img src="capturas/gui_v10_eldorado_barnhill_es.png" alt="Barnhill A 31 con litología y completación" loading="lazy">
+      <figcaption><b>Barnhill 'A' 31</b>, el mejor pozo del área (215 bbl/d): revestido hasta el fondo y cañoneado
+        solo en 18 ft del Arbuckle.</figcaption></figure>
+    <figure><img src="capturas/gui_v10_eldorado_hess34_es.png" alt="Hess A 34, pozo seco" loading="lazy">
+      <figcaption><b>Hess 'A' 34</b>, el pozo seco: tres pruebas de formación recuperaron agua y lodo.</figcaption></figure>
+  </div>
+
+  <h2 id="cutter">Caso real 2 · Cutter: gas, petróleo y agua en una arenisca</h2>
+  <blockquote>Sara 1-28 se completó en 1997 como pozo de gas, con tres pruebas de formación (DST). ¿Los registros
+    muestran dónde estaba el gas, dónde el petróleo y dónde el agua?</blockquote>
+  <p>Diez pozos del oeste de Kansas con gas y petróleo en las areniscas Morrow y Chester, a 5500 ft. Los registros de
+    los 90 llegan en varias corridas de papel digitalizado; Kurvo las une en un <b>compuesto</b> por pozo, quita los
+    picos y normaliza los rayos gamma contra un vecino.</p>
+  <figure class="ancho">
+    <img src="capturas/gui_v10_cutter_sara_es.png" alt="Sara 1-28 en el Chester" loading="lazy">
+    <figcaption><b>Sara 1-28 en el Chester:</b> compuesto de seis corridas, topes de formación y completación de
+      1997.</figcaption>
+  </figure>
+  <p>Con Rw = 0,038 ohm-m, sacado del gráfico de Pickett en una arena de agua, la saturación de Archie reproduce
+    lo que se decidió en 1997:</p>
+  <div class="tabla-scroll"><table>
+    <thead><tr><th>Intervalo (ft)</th><th>Porosidad</th><th>Resistividad</th><th>Sw</th><th>Lo que pasó</th></tr></thead>
+    <tbody>
+      <tr><td class="num">5550–5558</td><td class="num">0,11</td><td class="num">24 ohm-m</td><td class="num gas">0,36</td><td>Gas a superficie en 2,5 min; se cañoneó</td></tr>
+      <tr><td class="num">5584–5588</td><td class="num">0,14</td><td class="num">21 ohm-m</td><td class="num gas">0,35</td><td>Gas; se cañoneó</td></tr>
+      <tr><td class="num">5654–5670</td><td class="num">0,13</td><td class="num">4,8 ohm-m</td><td class="num mezcla">0,66</td><td>Petróleo con agua: se cementó para aislarla</td></tr>
+      <tr><td class="num">5672–5680</td><td class="num">0,16</td><td class="num">1,5 ohm-m</td><td class="num agua">1,00</td><td>Agua</td></tr>
+    </tbody>
+  </table></div>
+  <aside class="nota">La salinidad del agua de la prueba daría Rw = 0,061: el agua recuperada venía mezclada con
+    filtrado de lodo, más dulce. Kurvo enseña a medir Rw en el pozo, no a suponerlo.</aside>
+  <figure class="ancho">
+    <img src="capturas/gui_v10_cutter_basamento_es.png" alt="Cutter W I Unit 9 hasta el basamento" loading="lazy">
+    <figcaption><b>Cutter W I Unit 9</b>, perforado hasta el basamento en 2012, con la litología calculada de su mud
+      log digital.</figcaption>
+  </figure>
+
+  <h2 id="reconstruir">Reconstruir lo que falta, sin exagerar</h2>
+  <p>Cuando un pozo no tiene una curva en un tramo, Kurvo puede estimarla con una red neuronal entrenada en los
+    vecinos. La red entrega la curva y su <b>incertidumbre</b>, calibrada con un pozo que no vio al entrenar.</p>
+  <div class="tarjetas">
+    <div class="tarjeta"><span class="cifra">0,5–0,8</span><b>R² típico</b>en pruebas a ciegas, ocultando tramos
+      de 1000 ft en campos reales</div>
+    <div class="tarjeta"><span class="cifra">±0,06</span><b>g/cc de error</b>en densidad: sirve como tendencia, no
+      como medición</div>
+    <div class="tarjeta"><span class="cifra">1</span><b>pozo de validación</b>como mínimo; sin él, Kurvo avisa que
+      la incertidumbre no está calibrada</div>
+  </div>
+  <aside class="nota">La reconstrucción necesita PyTorch y se usa desde el código fuente; con una GPU NVIDIA entrena
+    mucho más rápido.</aside>
+
+  <h2 id="empezar">Empezar</h2>
+  <p><b>Windows:</b> descarga <code>Kurvo-1.0-setup.exe</code> y sigue el asistente: no pide permisos de
+    administrador y se desinstala como cualquier programa. Si prefieres no instalar, descarga el zip y abre
+    <code>Kurvo-sinDL.exe</code>. En la pantalla de inicio, <b>Probar un ejemplo</b> carga El Dorado o Cutter y abre su guía paso a paso.</p>
+  <figure class="ancho">
+    <img src="capturas/gui_v10_inicio_es.png" alt="Pantalla de inicio" loading="lazy">
+    <figcaption><b>Pantalla de inicio:</b> importar tus pozos, abrir un proyecto o probar un ejemplo.</figcaption>
+  </figure>
+  <p><b>Desde el código:</b> instala <a href="https://docs.astral.sh/uv/">uv</a>
+    (<code>winget install astral-sh.uv</code>), descarga el código y haz doble clic en <code>run.bat</code>. La primera
+    vez prepara todo, Python incluido, y abre Kurvo. En Linux o macOS:</p>
+  <pre>git clone <span id="url-git">https://github.com/OilCoder/kurvo.git</span>
+cd kurvo
+uv venv .venv --python 3.12
+uv pip install --python .venv/bin/python -e ".[dlis]"
+.venv/bin/python -m kurvo</pre>
+
+  <h2 id="limites">Lo que todavía no hace</h2>
+  <ul>
+    <li>La reconstrucción con deep learning no viene en el ejecutable; se usa desde el código.</li>
+    <li>La clasificación de litofacies con deep learning no está validada con datos reales.</li>
+    <li>Las pruebas de formación (DST) todavía no se marcan en el gráfico.</li>
+    <li>Las etiquetas de la completación se superponen cuando los elementos están muy juntos.</li>
+  </ul>
+</main>
+
+<footer class="apendice">
+  <div class="l">
+    <h3>Licencia</h3>
+    <p>Kurvo se distribuye con la <a href="https://polyformproject.org/licenses/noncommercial/1.0.0/">licencia
+      PolyForm Noncommercial 1.0.0</a>: libre para estudiar, enseñar, investigar y para uso personal; no para uso
+      comercial. Copyright 2026 OilCoder.</p>
+    <h3>Datos</h3>
+    <p>Los ejemplos usan datos públicos del <a href="https://www.kgs.ku.edu">Kansas Geological Survey</a>
+      (Universidad de Kansas): registros LAS, topes, fichas de ingeniería, mud logs y formularios de la Kansas
+      Corporation Commission. Se incluyen solo con fines de enseñanza.</p>
+    <h3>Citar</h3>
+<pre>@software{kurvo2026,
+  author = {OilCoder},
+  title  = {Kurvo: mantenimiento de curvas de registros de pozo},
+  year   = {2026},
+  version = {1.0},
+  url    = {<span id="url-cita">https://github.com/OilCoder/kurvo</span>}
+}</pre>
+  </div>
+</footer>
+
+<dialog class="zoom" id="zoom"><img alt=""></dialog>
+
+<script>
+// Repositorio en GitHub: cambiar aquí si el repositorio tiene otro nombre.
+const REPO = "https://github.com/OilCoder/kurvo";
+document.getElementById("descargar").href = REPO + "/releases/latest";
+document.getElementById("codigo").href = REPO;
+document.getElementById("manual").href = REPO + "/blob/main/docs/manual.md";
+
+const PASOS = [
+  ["Preparar", "Cargar y ordenar los datos.",
+   "Importa un LAS, una carpeta entera o un DLIS. Une las corridas de cada pozo en un compuesto, revisa la profundidad y la cabecera, y pone nombres estándar a las curvas: GR, RHOB, NPHI…",
+   "Importar LAS · Importar carpeta · Importar DLIS · Compuesto · Combinar · Empalmar corridas · Validar · Mnemónicos · Unidades · Remuestrear"],
+  ["Revisar", "¿Están bien los datos?",
+   "Cada curva recibe una nota: A (sin problemas), B (usar con cuidado) o C (no apta sin revisar). El panel de calidad se abre a pantalla completa, con la vista en profundidad, la cobertura, los histogramas y la comparación entre pozos.",
+   "Control de calidad · Tablero · Banderas QC · Gráfico rápido"],
+  ["Corregir", "Reparar las curvas.",
+   "Quita picos, rellena huecos cortos, edita sobre el gráfico o calcula curvas nuevas. Todo tiene vista previa, se puede deshacer y queda en la bitácora; la versión original de cada curva se guarda.",
+   "Quitar picos · Rellenar huecos · Edición gráfica · Suavizar · Límites · Calculadora · Antes/después · Restaurar · Lote"],
+  ["Alinear y comparar", "El pozo junto a sus vecinos.",
+   "Corrige desfases de profundidad entre corridas, normaliza los rayos gamma contra un pozo de referencia y arma cortes transversales en MD, TVD o TVDSS con los topes unidos.",
+   "Desfase automático · Desfase manual · Normalizar · Trayectoria · Corte transversal · Topes de formación"],
+  ["Reconstruir", "Las curvas o tramos que faltan.",
+   "Una red neuronal entrenada con los vecinos estima la curva que falta, con su banda de incertidumbre calibrada en un pozo de validación.",
+   "Reconstruir curva"],
+  ["Comprobar", "¿El resultado tiene sentido?",
+   "Una petrofísica básica para ver si las curvas reparadas cuentan una historia coherente: arcillosidad, porosidad, saturación de agua, y los gráficos de Pickett y Hingle.",
+   "Control de calidad · Bitácora · Análisis avanzado de registros · Pickett · Hingle · Litología · Completación"],
+  ["Entregar", "Archivos limpios.",
+   "Exporta LAS 2.0 con la cabecera completa, CSV o Excel, un reporte de calidad en HTML o PDF, o imprime el gráfico.",
+   "LAS · CSV · Excel · Reporte de QC · Imprimir"],
+];
+const barra = document.querySelector(".paso-barra");
+function mostrar(i) {
+  const [nombre, titulo, texto, herr] = PASOS[i];
+  barra.querySelectorAll("button").forEach((b, j) => b.setAttribute("aria-selected", j === i));
+  document.getElementById("paso-titulo").textContent = `${i + 1} · ${nombre}: ${titulo}`;
+  document.getElementById("paso-texto").textContent = texto;
+  const img = document.getElementById("paso-img");
+  img.src = `capturas/gui_v10_paso${i + 1}_es.png`;
+  img.alt = `Herramientas del paso ${i + 1}, ${nombre}`;
+  document.getElementById("paso-herr").textContent = herr;
+}
+PASOS.forEach(([nombre], i) => {
+  const b = document.createElement("button");
+  b.className = "paso-btn"; b.type = "button"; b.setAttribute("role", "tab");
+  b.innerHTML = `<span>${i + 1}</span>${nombre}`;
+  b.onclick = () => mostrar(i);
+  barra.appendChild(b);
+});
+mostrar(0);
+
+// zoom de las capturas
+const zoom = document.getElementById("zoom");
+document.addEventListener("click", e => {
+  if (e.target.matches("figure img, .paso-cuerpo img")) { zoom.querySelector("img").src = e.target.src; zoom.showModal(); }
+  else if (zoom.open && (e.target === zoom || e.target.closest("dialog.zoom"))) zoom.close();
+});
+
+// tema claro u oscuro, recordado en este navegador
+const raiz = document.documentElement;
+try { const t = localStorage.getItem("kurvo-tema"); if (t) raiz.dataset.theme = t; } catch (e) {}
+document.getElementById("tema").onclick = () => {
+  const oscuro = raiz.dataset.theme ? raiz.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  raiz.dataset.theme = oscuro ? "light" : "dark";
+  try { localStorage.setItem("kurvo-tema", raiz.dataset.theme); } catch (e) {}
+};
+</script>
+</body>
+</html>

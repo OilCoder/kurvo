@@ -1,0 +1,15 @@
+#COMPLETION
+#Sara 1-28
+#Plugging 2022 (CP-4)
+#12/08/22 00:00:00
+Surface casing (not pulled)|Casing 8-5/8"|0|1699
+Production casing (not pulled; shot off at 1415 and 1281 ft, did not come free)|Casing 5-1/2"|0|5799
+Chester perforations below the CIBP|Perforation 5-1/2"|5550|5561
+Chester perforations below the CIBP|Perforation 5-1/2"|5582|5589
+CIBP at 5500 ft|Bridge Plug 5-1/2"|5500|5502
+2 sx cement on top of the CIBP|Cement Plug 5-1/2"|5480|5500
+CIBP at 1800 ft|Bridge Plug 5-1/2"|1800|1802
+25 sx at 1780 ft (top estimated from the casing capacity)|Cement Plug 5-1/2"|1555|1780
+Perforated at 650 ft to circulate cement|Perforation 5-1/2"|650|651
+200 sx from 650 ft to surface, inside the casing|Cement Plug 5-1/2"|0|650
+200 sx from 650 ft to surface, behind the casing|Cement 5-1/2"|0|650

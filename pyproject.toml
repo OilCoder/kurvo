@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kurvo"
+version = "1.0.0"
+description = "Mantenimiento de curvas de pozo (LAS/DLIS): edición, control de calidad, validación y deep learning"
+requires-python = ">=3.10"
+dependencies = [
+    "PySide6>=6.6",
+    "pyqtgraph>=0.13.3",
+    "lasio>=0.31",
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.10",
+    "openpyxl>=3.1",
+]
+
+[project.optional-dependencies]
+# dliswriter (MIT) solo hace falta para regenerar datos/realistas/PZ-104.dlis (tests/generar_datos_realistas.py)
+dev = ["pytest>=8", "dliswriter>=1.2"]
+dlis = ["dlisio>=1.0"]
+# PyTorch: la versión con CUDA se instala aparte (ver README / run.bat); esta es la genérica
+dl = ["torch>=2.3"]
+
+[project.gui-scripts]
+kurvo = "kurvo.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

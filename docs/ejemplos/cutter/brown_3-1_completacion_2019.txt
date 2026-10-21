@@ -1,0 +1,11 @@
+#COMPLETION
+#BROWN 3-1
+#Completion 2019 (ACO-1, KGS engineering data)
+#10/10/19 00:00:00
+Surface casing 24 lb/ft, hole 12-1/4in, 835 sx A-Serv Lite (lead) and Class C (tail)|Casing 8-5/8"|0|1741
+Surface casing shoe|Casing Shoe 8-5/8"|1736|1741
+Production casing 15.5 lb/ft, hole 7-7/8in, cemented in two stages: 415 sx at the shoe and 425 sx through the stage tool at 3150 ft|Casing 5-1/2"|0|5712
+Production casing shoe|Casing Shoe 5-1/2"|5707|5712
+Chester perforations 4 shots/ft; frac with 40,572 gal gelled water and 50,000 lb sand|Perforation 5-1/2"|5577|5585
+Chester perforations 2 shots/ft; acid 2500 gal 7.5% NEFE-HCl with 30 ball sealers; IP 3.5 bbl oil + 22.5 bbl water per day (pumping)|Perforation 5-1/2"|5590|5600
+Tubing 2-7/8in at 5553 ft|Tubing 2.875"|0|5553
