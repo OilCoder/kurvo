@@ -67,6 +67,7 @@ h1 { font-size: clamp(40px, 7vw, 64px); line-height: 1.02; letter-spacing: -.03e
   font-weight: 600; text-decoration: none; border: 1px solid var(--linea); color: var(--texto); background: var(--fondo); }
 .boton.principal { background: linear-gradient(135deg, #12a8a0, #16306e); color: #fff; border: 0; }
 .boton:hover { filter: brightness(1.07); }
+.nota-descarga { font-size: 13.5px; color: var(--suave); margin: -18px 0 30px; }
 .meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; font-size: 13px;
   border-top: 1px solid var(--linea); padding-top: 18px; color: var(--suave); }
 .meta b { display: block; color: var(--texto); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 2px; }
@@ -144,10 +145,12 @@ dialog.zoom img { max-width: 96vw; max-height: 94vh; display: block; border-radi
     <p class="lema">Registros de pozo viejos, incompletos o desordenados, puestos en orden en siete pasos, sin
       experiencia previa.</p>
     <div class="botones">
-      <a class="boton principal" id="descargar" href="#">⬇ Descargar para Windows</a>
+      <a class="boton principal" id="descargar" href="#">⬇ Descargar el instalador para Windows</a>
       <a class="boton" id="codigo" href="#">Código fuente</a>
       <a class="boton" id="manual" href="#">Manual</a>
     </div>
+    <p class="sans nota-descarga">Windows 10/11 de 64 bits · 85 MB · no pide permisos de administrador.
+      <a id="zip" href="#">Sin instalar (zip)</a> · <a id="versiones" href="#">Todas las versiones</a></p>
     <div class="meta">
       <div><b>Autor</b>OilCoder</div>
       <div><b>Versión</b>1.0 · octubre de 2026</div>
@@ -318,7 +321,11 @@ uv pip install --python .venv/bin/python -e ".[dlis]"
 <script>
 // Repositorio en GitHub: cambiar aquí si el repositorio tiene otro nombre.
 const REPO = "https://github.com/OilCoder/kurvo";
-document.getElementById("descargar").href = REPO + "/releases/latest";
+// enlaces directos al último lanzamiento (los nombres de archivo llevan la versión)
+const VERSION = "1.0";
+document.getElementById("descargar").href = `${REPO}/releases/latest/download/Kurvo-${VERSION}-setup.exe`;
+document.getElementById("zip").href = `${REPO}/releases/latest/download/Kurvo-${VERSION}-win64.zip`;
+document.getElementById("versiones").href = REPO + "/releases";
 document.getElementById("codigo").href = REPO;
 document.getElementById("manual").href = REPO + "/blob/main/docs/manual.md";
 

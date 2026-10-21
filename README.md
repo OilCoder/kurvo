@@ -1,5 +1,10 @@
 # Kurvo
 
+**[⬇ Descargar el instalador para Windows](https://github.com/OilCoder/kurvo/releases/latest/download/Kurvo-1.0-setup.exe)**
+(Windows 10/11, 64 bits, 85 MB, sin permisos de administrador) ·
+[sin instalar (zip)](https://github.com/OilCoder/kurvo/releases/latest/download/Kurvo-1.0-win64.zip) ·
+[página del proyecto](https://oilcoder.github.io/kurvo/) · [manual](docs/manual.md)
+
 Aplicación de escritorio para el **mantenimiento de curvas de registros de pozo** (LAS y DLIS):
 importar, validar, controlar la calidad, editar y reparar, normalizar entre pozos, corregir el
 desfase en profundidad, reconstruir curvas con deep learning y exportar, con deshacer/rehacer y una
